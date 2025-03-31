@@ -1,0 +1,100 @@
+2023-10-17 16:57:03 ERROR  : ERROR:  syntax error at or near "#"
+LINE 1: #create database loja;
+        ^
+2023-10-17 17:02:14 ERROR  : ERROR:  syntax error at or near ")"
+LINE 6: );
+        ^
+2023-10-17 17:05:32 ERROR  : ERROR:  column "Bola" does not exist
+LINE 12: values(1,"Bola","Bola de futebol de campo");
+                  ^
+2023-10-17 17:06:16 ERROR  : ERROR:  column "Bola" does not exist
+LINE 12: values( "Bola","Bola de futebol de campo");
+                 ^
+2023-10-17 17:06:24 ERROR  : ERROR:  column "Bola" does not exist
+LINE 12: values( "Bola","Bola de futebol de campo");
+                 ^
+2023-10-17 17:07:53 ERROR  : ERROR:  duplicate key value violates unique constraint "produto_pkey"
+DETAIL:  Key (id)=(1) already exists.
+2023-10-17 17:08:03 ERROR  : ERROR:  null value in column "id" violates not-null constraint
+DETAIL:  Failing row contains (null, Bola, Bola de futebol de campo).
+2023-10-17 18:24:37 ERROR  : ERROR:  syntax error at or near "table"
+LINE 1: delete from table produto;
+                    ^
+2023-10-17 19:19:22 ERROR  : ERROR:  relation "produto" does not exist
+LINE 1: select * from produto;
+                      ^
+2023-10-17 19:20:59 ERROR  : ERROR:  duplicate key value violates unique constraint "produto_pkey"
+DETAIL:  Key (id)=(1) already exists.
+2023-10-17 21:28:51 ERROR  : ERROR:  syntax error at or near "table"
+LINE 1: delete from table produto where id =1
+                    ^
+2023-10-17 21:29:19 ERROR  : ERROR:  syntax error at or near ")"
+LINE 15: values( 'Bola 4',);
+                          ^
+2023-10-17 22:40:49 ERROR  : ERROR:  column "valor" contains null values
+2023-10-17 22:41:23 ERROR  : ERROR:  syntax error at or near "defalt"
+LINE 1: alter table produto add valor int not null defalt 0;
+                                                   ^
+2023-10-18 11:45:40 ERROR  : ERROR:  syntax error at or near "remove"
+LINE 1: alter table produto remove valor;
+                            ^
+2023-10-18 11:45:52 ERROR  : ERROR:  syntax error at or near "delete"
+LINE 1: alter table produto delete valor;
+                            ^
+2023-10-18 11:52:50 ERROR  : ERROR:  syntax error at or near "item"
+LINE 1: create item (
+               ^
+2023-10-18 11:53:00 ERROR  : ERROR:  syntax error at or near ","
+LINE 3:  id_produto,
+                   ^
+2023-10-18 11:53:08 ERROR  : ERROR:  syntax error at or near "("
+LINE 4:  foreign key (id_venda) references (id) venda,
+                                           ^
+2023-10-18 11:53:33 ERROR  : ERROR:  schema "venda" does not exist
+2023-10-18 11:54:01 ERROR  : ERROR:  schema "venda" does not exist
+2023-10-18 11:54:20 ERROR  : ERROR:  schema "venda" does not exist
+2023-10-18 11:54:39 ERROR  : ERROR:  syntax error at or near "->"
+LINE 4:  foreign key (id_venda) references venda->id,
+                                                ^
+2023-10-18 11:59:54 ERROR  : ERROR:  syntax error at or near "="
+LINE 1: select nome_comprador,produto from venda.id_venda = venda.id...
+                                                          ^
+2023-10-18 12:00:12 ERROR  : ERROR:  syntax error at or near "is"
+LINE 1: select nome_comprador,produto from venda.id_venda is  venda....
+                                                          ^
+2023-10-18 12:00:21 ERROR  : ERROR:  syntax error at or near "=="
+LINE 1: select nome_comprador,produto from venda.id_venda ==  venda....
+                                                          ^
+2023-10-18 12:00:31 ERROR  : ERROR:  syntax error at or near "="
+LINE 1: select nome_comprador,produto from venda.id_venda =  venda.i...
+                                                          ^
+2023-10-18 12:01:09 ERROR  : ERROR:  syntax error at or near ","
+LINE 2: ...da, produto, item where venda.id_venda =  venda.id, venda.id...
+                                                             ^
+2023-10-18 12:04:45 ERROR  : ERROR:  column venda.id_venda does not exist
+LINE 3: ...comprador,produto from venda, produto, item where venda.id_v...
+                                                             ^
+2023-10-18 12:17:38 ERROR  : ERROR:  syntax error at or near ","
+LINE 1: ...venda =  venda.id and item.id_produto = produto.id, as total...
+                                                             ^
+2023-10-18 12:20:11 ERROR  : ERROR:  syntax error at or near "as"
+LINE 1: ...id_produto = produto.id HAVING  valor * quantidade as total;
+                                                              ^
+2023-10-18 12:20:24 ERROR  : ERROR:  column "total" does not exist
+LINE 1: select nome_comprador,nome, total from venda, produto, item ...
+                                    ^
+2023-10-18 12:20:43 ERROR  : ERROR:  column "total" does not exist
+LINE 1: select nome_comprador,nome, total from venda, produto, item ...
+                                    ^
+2023-10-18 12:21:04 ERROR  : ERROR:  column "total" does not exist
+LINE 1: ...venda.id and item.id_produto = produto.id HAVING  total = va...
+                                                             ^
+2023-10-18 12:21:14 ERROR  : ERROR:  syntax error at or near "as"
+LINE 1: ...id and item.id_produto = produto.id HAVING  total as valor *...
+                                                             ^
+2023-10-18 12:21:32 ERROR  : ERROR:  argument of HAVING must be type boolean, not type integer
+LINE 1: ...venda.id and item.id_produto = produto.id HAVING  valor * qu...
+                                                             ^
+2023-10-18 18:34:07 ERROR  : ERROR:  syntax error at or near "select"
+LINE 21: select * from produto where id>=3;
+         ^
